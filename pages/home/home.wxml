@@ -1,0 +1,22 @@
+<view class='top-view'>
+  <view>
+    <image src='../../images/top_left.png' mode='widthFix' class='left-img' bindtap='newApp'></image>
+    <navigator class="nav-view" wx:if='{{isUse}}' target="miniProgram" open-type="navigate" app-id="{{new_app_id}}" path="" extra-data="" version="release"></navigator>
+  </view>
+  <view>
+    <image src='../../images/top_right.png' mode='widthFix' class='left-img'></image>
+    <navigator class="nav-view" wx:if='{{isUse}}' target="miniProgram" open-type="navigate" app-id="{{new_app_id}}" path="" extra-data="" version="release"></navigator>
+  </view>
+</view>
+
+<view class='hot-list'>
+  <view class='img-view' wx:for='{{17}}' wx:key='id'>
+    <image src='{{qn_img_url + (item+1)}}.gif' bindtap='imagedetail' data-index='{{index}}' class="item-img" mode='widthFix'></image>
+  </view>
+</view>
+
+<!-- <view class='hot-list'>
+  <view class='img-view' wx:for='{{17}}' wx:key='id'>
+    <image src='{{base_img_url + (item+1)}}.gif' bindtap='imagedetail' data-index='{{index}}' class="item-img" mode='widthFix'></image>
+  </view>
+</view> -->

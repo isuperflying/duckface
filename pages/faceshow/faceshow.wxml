@@ -1,0 +1,29 @@
+<image src="{{currrent_img}}" class="result-image" mode='widthFix' />
+
+<view class='bottom-view'>
+  <view class='down-view' bindtap='saveImg'>
+    <image class='down-img' src='../../images/down_icon.png'></image>
+    <text class='down-text'>下载表情</text>
+  </view>
+  <view class='down-hint'><text>点击查看大图，长按大图分享/下载表情</text></view>
+  <view class='collection-view'>
+    <view class='item-view-wrapper'>
+      <view class='item-view'>
+        <image src='../../images/share_icon.png'></image>
+        <text>分享</text>
+      </view>
+      <view>
+        <button class='share-btn' open-type='share'></button>
+      </view>
+    </view>
+    <view class='item-view-wrapper'>
+      <view class='item-view' bindtap='newApp'>
+        <image src='../../images/home_icon.png'></image>
+        <text>更多好玩</text>
+      </view>
+      <view>
+        <navigator class="nav-view" wx:if='{{isUse}}' target="miniProgram" open-type="navigate" app-id="{{new_app_id}}" path="" extra-data="" version="release"></navigator>
+      </view>
+    </view>
+  </view>
+</view>
